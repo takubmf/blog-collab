@@ -1,7 +1,9 @@
 <section class="container">
-  <h3 class="seller-name">{{seller.name}}</h3>
+  <h3 class="seller-name">
+  <a href="/views/sellerhome.handlebars">{{seller-name}}</a>
+  </h3>
 <section class="blog-post">
-  <div class="blog-details">
+  <div class="blog-description">
     <h3>{{blog.title}}</h3>
     <p>{{seller.name}}</p>
     <p>{{blog.description}}</p>
@@ -11,4 +13,4 @@
 </section>
 
 
-{{!-- User doesn't need to log in to view seller's blogs --}}
+{{!-- User doesn't need to log in to view seller's blog posts --}}
