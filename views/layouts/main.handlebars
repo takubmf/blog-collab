@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ILLUNA</title>
   <link rel="stylesheet" type="text/css" href="/public/css/style.css">
+  <link rel="stylesheet" type="text/css" href="/public/css/stylelogin.css">
 </head>
 
 <body>
@@ -24,13 +25,27 @@
     <aside>
       <h2>Hello more filler text</h2>
     </aside>
-    <div class="gallery">
-      {{{body}}}
+    <div class="homepage">
+      {{!-- homepage.handlebars --}}
+    </div>
+    <div class="marketplace">
+      {{!-- body? --}}
+    </div>
+    <div class="blog">
+      {{!-- what does body do --}}
+      {{{body}}} 
+    </div>
+    {{!-- Chat section could be changed --}}
+    <div class="chat">
+      {{!-- chat --}}
     </div>
   </main>
   {{#if loggedIn}}
   <script src="/public/js/logout.js"></script>
   {{/if}}
 </body>
+
+{{!-- adds animation to login page --}}
+<script src="/public/css/js/css.js"></script>
 
 </html>

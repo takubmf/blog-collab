@@ -1,10 +1,14 @@
 <section class="container">
   <h3 class="seller-name">{{seller.name}}</h3>
-  <section class="flex-row justify-center">
-    {{#each seller.blog as |blog|}}
-    {{> blog-descriptions}}
-    {{/each}}
-  </section>
+<section class="blog-post">
+  <div class="blog-details">
+    <h3>{{blog.title}}</h3>
+    <p>{{seller.name}}</p>
+    <p>{{blog.description}}</p>
+    {{!-- add the date the blog was posted --}}
+    <p>POST DATE</p>
+  </div>
 </section>
+
 
 {{!-- User doesn't need to log in to view seller's blogs --}}
