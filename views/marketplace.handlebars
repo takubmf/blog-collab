@@ -1,0 +1,18 @@
+<section class="container">
+  <h3 class="seller-name">{{seller.name}}</h3>
+  {{!-- seller, item, price, details, filename still needs a database --}}
+<img src="/images/{{item.filename}}" alt="{{item.description}}">
+  <section class="flex-row justify-center">
+    {{#each seller.item as |item|}}
+    {{> item-price}}
+    {{> item-details}}
+    {{/each}}
+  </section>
+</section>
+{{#if loggedIn}}
+{{!-- message seller --}}
+{{else}}
+<a href="/login">You must be logged in to message the seller</a>
+{{/if}}
+
+{{!-- User must be logged into message the seller, but not to view --}}
