@@ -1,0 +1,65 @@
+.profile-container {
+    padding: 30px;
+    border: 1px lightgrey solid;
+    border-radius: 15px;
+}
+.pfp {
+    border: 3px lightgray solid;
+    border-radius: 50%;
+    width: 15%;
+    height: auto;
+    float: left;
+    margin-right: 15px;
+}
+.profile-header {
+    width: 100%;
+}
+.profile-msg {
+    padding: 15px;
+    background-color: mediumpurple;
+    border: 0px;
+    border-radius: 10px;
+    color:aliceblue;
+    font-size: 14px;
+}
+.profile-msg:hover {
+    background-color: blueviolet;
+}
+
+nav > ul {
+    list-style-type: none;
+    background-color: cornflowerblue;
+    padding: 15px;
+}
+/* make list items 50% */
+nav > ul > li {
+    display: inline;
+    padding: 15px;
+    border-right: 1px solid whitesmoke;
+}
+nav > ul > li > a {
+    text-decoration: none;
+    color: white;
+}
+
+nav > ul > li:hover, nav > ul > li:active{
+    background-color: grey;
+}
+
+@media screen and (max-width: 768px) {
+.pfp {
+    width: 20%;
+    margin: 15px 15px 15px 0px;
+}
+.profile-header {
+    width: 75%;
+}
+.profile-msg {
+    width: 100%;
+}
+}
+@media screen and (min-width: 1032px) {
+    .pfp {
+        width: 10%;
+    }
+}

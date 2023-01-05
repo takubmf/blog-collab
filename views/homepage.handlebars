@@ -1,0 +1,20 @@
+{{!-- Homepage includes blogs and market ads from all sellers --}}
+
+{{!-- Database needs: 
+    seller, item, item-details, item-price
+    seller, blog-post
+ --}}
+
+<section class="blog-homepage">
+    {{#each blog.title as |blog|}}
+    {{> blog-descriptions}}
+    {{/each}}
+</section>
+
+{{!-- seller, item, price, details, filename still needs a database --}}
+<section class="marketplace-item">
+    {{#each seller.item as |item|}}
+    {{> item-price}}
+    {{> item-details}}
+    {{/each}}
+</section>
