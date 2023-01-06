@@ -26,6 +26,8 @@ const sess = {
     db: sequelize,
   }),
 };
+
+app.use(session(sess))
 // Using Sequelize Session
 // app.use(session(sess));
 const hbs = exphbs.create({ helpers });

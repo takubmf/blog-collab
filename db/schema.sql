@@ -1,1 +1,5 @@
+DROP DATABASE IF EXISTS illuna;
+
 CREATE DATABASE illuna;
+
+USE illuna;

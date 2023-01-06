@@ -1,10 +1,9 @@
-const express = require('express');
-const router = express.Router();
-const PORT = 3001;
+const router = require('express').Router();
+// const PORT = 3001;
 
-const userRoute = require("./api/user-routes");
 const homeRoute = require("./home-routes");
+const userRoute = require("./api/user-routes");
+router.use('/', homeRoute)
 router.use('/user', userRoute)
-router.use('./home', homeRoute)
 
 module.exports = router;
