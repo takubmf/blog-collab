@@ -7,7 +7,7 @@ router.get("/", (req,res) => {
     } catch(err) {
         console.log(err)
     }
-})
+});
 
 router.get("/blog/:id", (req, res) => {
 
@@ -38,6 +38,6 @@ router.get("/login", async (req, res) => {
     } catch(err) {
         console.log(err)
     }
-})
+});
 
 module.exports = router;
