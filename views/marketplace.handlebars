@@ -1,0 +1,23 @@
+<section class="container">
+  <h3 class="seller-name">
+  <a href="/views/sellerhome.handlebars">{{seller-name}}</a>
+  </h3>
+  {{!-- needs a section to actually Post the photo --}}
+<img src="/images/{{item.filename}}" alt="{{item.details}}">
+  <section class="marketplace-item">
+    <h3>{{item.title}}</h3> 
+    <h4>{{item.price}}</h4>
+    <p>{{seller.name}}</p>
+    <p>{{item.details}}</p>
+  </section>
+  {{!-- Needs to be linked to DMS --}}
+  <a href="CHATROOM">Message the seller about this item!</a>
+</section>
+{{#if loggedIn}}
+{{!-- message seller chatroom.handlebars --}}
+{{else}}
+<h4>You must be logged in to message the seller!</h4>
+<a href="/login">Click here to log in</a>
+{{/if}}
+
+{{!-- User must be logged into message the seller, but not to view --}}
