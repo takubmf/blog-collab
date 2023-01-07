@@ -10,21 +10,23 @@
 </head>
 
 <body>
+  {{!-- <img class="logo" src="/public/logo/illuna.png" alt="illuna logo"> --}}
+  <br>
   <header>
-    <h1>Welcome to ILLUNA</h1>
+    <h1 class="welcome">Welcome to ILLUNA</h1>
   </header>
   <nav>
-    <a href="/">Home</a>
     {{#if loggedIn}}
     <button id="logout" class="btn-no-style">Logout</button>
     {{else}}
     <a href="/login">Login</a>
+    {{!-- may not need ELSE and HREF to login --}}
     {{/if}}
   </nav>
   <main>
-    <aside>
+    {{!-- <aside>
       <h2>Hello more filler text</h2>
-    </aside>
+    </aside> --}}
     <div class="homepage">
       {{!-- homepage.handlebars --}}
     </div>
