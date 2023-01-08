@@ -1,13 +1,25 @@
 {
-  "name": "user-list",
+  "name": "blog-collab",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
-    "seed": "node seeds/seed.js"
+    "seed": "node seeds/index.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/takubmf/blog-collab.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/takubmf/blog-collab/issues"
+  },
+  "homepage": "https://github.com/takubmf/blog-collab#readme",
+
   "dependencies": {
     "bcrypt": "^5.1.0",
     "connect-session-sequelize": "^7.1.5",

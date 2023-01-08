@@ -11,6 +11,8 @@
 }
 
 body {
+    margin: auto;
+    padding: 0px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -27,8 +29,8 @@ body {
 
 .form-wrapper {
     position: absolute;
-    top: 0;
-    left: 0;
+    margin:auto;
+    padding:0px;
     display: flex;
     justify-content: center;
     align-items: center;

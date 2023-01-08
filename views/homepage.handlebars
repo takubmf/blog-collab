@@ -1,20 +1,69 @@
-{{!-- Homepage includes blogs and market ads from all sellers --}}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,700,1,200" />
+    <title>Document</title>
+</head>
+<body>
+    <br>
+  <header>
+    <h1 class="welcome">Welcome to ILLUNA</h1>
+  </header>
+  <main>
+    <div>
+        <section class="nav">
+            <form action="/action_page.php">
+                <input type="text" placeholder="Search.." name="search">
+                <button type="submit"><i class="fa fa-search"></i></button>
+            </form>
+                <ul>
+      {{#if loggedIn}}
+      <li class="li-inline nav-item"><a href="#" id="logout-link">Logout</a></li>
+      {{else}}
+      
+      {{/if}}<li class="li-inline nav-item"><a href="/login">Login</a></li>
+    </ul>
+                <a href="#">Home</a>
+                <a href="/new-post">New Post</a>
+                <a href="/market">Market</a>
+                <a href="/messages">Message</a>
+                <a href="/account">Account</a>
+        </section>
+    </div>
+        <div class="card">
+  <div class="card-header  flex-row justify-space-between">
+    <h2>
+      <a href="/post/{{post.id}}">
+        <div class="col-8">{{post.postTitle}}</div>
+      </a>
+    </h2>
+    <div class="col-3">posted by {{post.user.username}} on {{format_date post.dateCreated}}
+    </div>
+  </div>  
+  <p class="card-body">
+   {{post.postContent}}
+  </p>
+</div>
+<input type="hidden" name="post-id" value="{{post.id}}"/>
+{{#if loggedIn}}
+<div class="card">
+  <div class="card-header"></div>
+  <form class="card-body" id="new-comment-form">
+    
+    <p class="form-label">Comment:</p>
+    <textarea class="form-input" id="comment-body" name="comment-body"></textarea>
+    <button type="submit" class="btn btn-primary">Submit:</button>
+  </form>
+{{> comments post.comments}}
+</div>
+{{/if}}
+<script src="/js/comment.js"></script>
+    </div>
+  </main>
+</body>
 
-{{!-- Database needs: 
-    seller, item, item-details, item-price
-    seller, blog-post
- --}}
-
-<section class="blog-homepage">
-    {{#each blog.title as |blog|}}
-    {{> blog-descriptions}}
-    {{/each}}
-</section>
-
-{{!-- seller, item, price, details, filename still needs a database --}}
-<section class="marketplace-item">
-    {{#each seller.item as |item|}}
-    {{> item-price}}
-    {{> item-details}}
-    {{/each}}
-</section>
+</html>

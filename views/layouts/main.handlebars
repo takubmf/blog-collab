@@ -7,38 +7,23 @@
   <title>ILLUNA</title>
   <link rel="stylesheet" href="/public/css/style.css">
   <link rel="stylesheet" href="css/stylelogin.css" />
+  <link href="/images/favicon.ico" rel="shortcut icon">
+  <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,400i,700&display=swap" rel="stylesheet">
 </head>
-
 <body>
-  {{!-- <img class="logo" src="/public/logo/illuna.png" alt="illuna logo"> --}}
-  <br>
-  <header>
-    <h1 class="welcome">Welcome to ILLUNA</h1>
-  </header>
-  <nav>
-    {{#if loggedIn}}
-    <button id="logout" class="btn-no-style">Logout</button>
-    {{else}}
-    <br><br><br>
-    <a href="/login">Login</a>
-    {{/if}}
-  </nav>
-  <main>
-    <div class="homepage">
-      {{{body}}} 
-    </div>
-    <div class="marketplace">
-    <div class="blog">
-    </div>
-    <div class="chat">
-    </div>
+<main class="col-auto">
+    {{{body}}}
   </main>
-  {{#if loggedIn}}
-  <script src="/public/js/logout.js"></script>
-  {{/if}}
-</body>
 
+  <footer class="footer flex-row justify-center">
+    
+    &copy; IllUNA CREATIONS
+  </footer>
+</body>
 {{!-- adds animation to login page --}}
 <script src="css/login/css.js"></script>
 
 </html>
+{{#if loggedIn}}
+<script src="/js/logout.js"></script>
+{{/if}}
