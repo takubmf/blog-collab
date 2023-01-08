@@ -203,6 +203,7 @@ h2 {
 nav > a {
     text-decoration: none;
     color: white;
+    display: inline;
 }
 nav > a:hover {
     text-decoration: underline;
@@ -213,9 +214,9 @@ nav > a:hover {
     .welcome {
         display: none;
     }
-    nav > a {
+    /* nav > a {
         display: none;
-    }
+    } */
     .desktop-login {
         display: none;
     }
@@ -226,9 +227,9 @@ nav > a:hover {
     .welcome {
         display: none;
     }
-    nav > a {
+    /* nav > a {
         visibility: hidden;
-    }
+    } */
     .desktop-login {
         display: none;
     }

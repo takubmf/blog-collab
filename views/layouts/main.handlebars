@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ILLUNA</title>
-  {{!-- <link rel="stylesheet" href="/public/css/style.css"> --}}
+  <link rel="stylesheet" href="/public/css/style.css">
   <link rel="stylesheet" href="css/stylelogin.css" />
 </head>
 
@@ -19,27 +19,18 @@
     {{#if loggedIn}}
     <button id="logout" class="btn-no-style">Logout</button>
     {{else}}
+    <br><br><br>
     <a href="/login">Login</a>
-    {{!-- may not need ELSE and HREF to login --}}
     {{/if}}
   </nav>
   <main>
-    {{!-- <aside>
-      <h2>Hello more filler text</h2>
-    </aside> --}}
     <div class="homepage">
-      {{!-- homepage.handlebars --}}
-    </div>
-    <div class="marketplace">
-      {{!-- body? --}}
-    </div>
-    <div class="blog">
-      {{!-- what does body do --}}
       {{{body}}} 
     </div>
-    {{!-- Chat section could be changed --}}
+    <div class="marketplace">
+    <div class="blog">
+    </div>
     <div class="chat">
-      {{!-- chat --}}
     </div>
   </main>
   {{#if loggedIn}}
