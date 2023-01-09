@@ -11,7 +11,12 @@
       });
   
       if (response.ok) {
-        document.location.replace("/homepage");
+        document.location.replace("/views/homepage.handlebars");
+        var confirmation = document.querySelector('.welcome');
+
+        confirmation.innerHTML = "";
+        var success = document.createElement('p');
+        confirmation.append(success);
       } else {
         alert('Failed to log in.');
       }

@@ -16,19 +16,19 @@
 }
 .profile-msg {
     padding: 15px;
-    background-color: mediumpurple;
+    background-color:firebrick;
     border: 0px;
     border-radius: 10px;
     color:aliceblue;
     font-size: 14px;
 }
 .profile-msg:hover {
-    background-color: blueviolet;
+    background-color: firebrick;
 }
 
 nav > ul {
     list-style-type: none;
-    background-color: cornflowerblue;
+    background-color: darkslategray;
     padding: 15px;
 }
 /* make list items 50% */
