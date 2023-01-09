@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -22,6 +21,7 @@
             </form>
                 <ul>
       {{#if loggedIn}}
+
       <li class="li-inline nav-item"><a href="#" id="logout-link">Logout</a></li>
       {{else}}
       <li class="li-inline nav-item"><a href="/login">Login</a></li>
@@ -34,6 +34,7 @@
                 <a href="/account">Account</a>
         </section>
     </div>
+{{#each posts as |posts| }}
         <div class="card">
   <div class="card-header  flex-row justify-space-between">
     <h2>
@@ -48,6 +49,7 @@
    {{post.postContent}}
   </p>
 </div>
+{{/each}}
 <input type="hidden" name="post-id" value="{{post.id}}"/>
 {{#if loggedIn}}
 <div class="card">
