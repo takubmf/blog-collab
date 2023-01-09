@@ -1,1 +1,34 @@
-<h1>message page</h1>
+<link rel="stylesheet" href="/assets/css/chat.css" />
+
+<div id="chatWindow" class="container">
+    <div id="friends" class="column bg-light card border-light mb-3 contacts_card">
+        <h3><i class="fas fa-users"></i> Users</h3>
+
+        <div class="card-body contacts_body">
+            <div class="d-flex bd-highlight">
+
+                <ul id="users"></ul>
+            </div>
+        </div>
+    </div>
+    <div id="conversation" class="column">
+        <h3><i class="fas fa-comments"></i> Room Name:</h3>
+        <h2 id="room-name"></h2>
+        <div id="conversationHistory">
+            <div class="chat-messages"></div>
+        </div>
+        <div class="chat-form-container">
+            <form id="chat-form">
+                <input id="msg" type="text" class="form-control type_msg" placeholder="Type your message here..."
+                    required autocomplete="off" />
+                <button class="btn btn-main"> Send</button>
+            </form>
+
+        </div>
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.9.2/qs.min.js"
+    integrity="sha256-TDxXjkAUay70ae/QJBEpGKkpVslXaHHayklIVglFRT4=" crossorigin="anonymous"></script>
+<script src="/socket.io/socket.io.js"></script>
+<script src="/js/main.js"></script>
