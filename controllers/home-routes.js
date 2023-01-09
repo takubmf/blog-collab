@@ -87,7 +87,7 @@ router.get('/signup', (req, res) => {
 });
 
 router.get("/homepage",(req,res)=>{
-  res.render("new-post")
+  res.render("homepage")
 })
 
 module.exports = router;

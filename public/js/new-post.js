@@ -7,7 +7,7 @@ const newFormHandler = async function(event) {
     console.log(postTitle);
     console.log(postContent);
   
-    await fetch(`/api/post`, {
+    await fetch('models/post', {
       method: 'POST',
       body: JSON.stringify({
         postTitle,
@@ -16,9 +16,9 @@ const newFormHandler = async function(event) {
       headers: { 'Content-Type': 'application/json' },
     });
   
-    // document.location.replace('/dashboard');
+    document.location.replace('/homepage');
   };
   
   document
-    .querySelector('#new-post-form')
+    .querySelector('.new-post-form')
     .addEventListener('submit', newFormHandler);
