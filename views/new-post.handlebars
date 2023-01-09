@@ -3,12 +3,12 @@
   <form class="card-body" id="new-post-form">
     <input type="hidden" name="post-id" value="{{post.id}}"/>
     <div>
-      <label class="form-label">Title:</label>
-      <input class="form-input" type="text" name="post-title"/>
+      {{!-- <label class="form-label">Title:</label> --}}
+      <input class="form-input" type="text" name="post-title" placeholder="Title"/>
     </div>
     <div>
-      <label class="form-label">Content:</label>
-      <textarea class="form-textarea form-input" name="post-body" data-number="8"></textarea>
+      {{!-- <label class="form-label">Content:</label> --}}
+      <textarea class="form-textarea form-input" name="post-body" data-number="8" placeholder="Content"></textarea>
     </div>
  
     <button class="btn btn-primary">CREATE</button>

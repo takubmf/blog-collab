@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,700,1,200" />
-    <title>Document</title>
+    <link rel="stylesheet" href="/public/css/style.css">
+    <title>Homepage</title>
 </head>
 <body>
     <br>
@@ -17,21 +18,26 @@
     <div>
         <section class="nav">
             <form action="/action_page.php">
-                <input type="text" placeholder="Search.." name="search">
+                <input type="text" placeholder="Search.." name="search" class="search">
                 <button type="submit"><i class="fa fa-search"></i></button>
             </form>
-                <ul>
+          <ul>
       {{#if loggedIn}}
-      <li class="li-inline nav-item"><a href="#" id="logout-link">Logout</a></li>
+            <li class="li-inline nav-item"><a href="#" id="logout-link">Logout</a></li>
       {{else}}
       
-      {{/if}}<li class="li-inline nav-item"><a href="/login">Login</a></li>
-    </ul>
+      {{/if}}
+            <li class="li-inline nav-item">
+        <a class="login" href="/login">Login</a>
+            </li>
+          </ul>
+          <div class="navbar">
                 <a href="#">Home</a>
                 <a href="/new-post">New Post</a>
                 <a href="/market">Market</a>
                 <a href="/messages">Message</a>
                 <a href="/account">Account</a>
+          </div>
         </section>
     </div>
         <div class="card">
@@ -41,7 +47,7 @@
         <div class="col-8">{{post.postTitle}}</div>
       </a>
     </h2>
-    <div class="col-3">posted by {{post.user.username}} on {{format_date post.dateCreated}}
+    <div class="posted col-3">posted by {{post.user.username}} on {{format_date post.dateCreated}}
     </div>
   </div>  
   <p class="card-body">
