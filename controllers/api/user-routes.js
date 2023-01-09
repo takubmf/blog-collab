@@ -4,20 +4,24 @@ const { User } = require('../../models');
 // SIGN UP
 
 router.post('/', async (req, res) => {
+  console.log("USER create",req.body)
   try {
     const newUser = await User.create({
       username: req.body.username,
-      password: req.body.password
+      password: req.body.password,
+      email:req.body.email
     });
 
     req.session.save(() => {
       req.session.userId = newUser.id;
       req.session.username = newUser.username;
+      req.session.email = newUser.email;
       req.session.loggedIn = true;
-
+     console.log(newUser,req.session)
       res.json(newUser);
     });
   } catch (err) {
+    console.log(err,"Signup")
     res.status(500).json(err);
   }
 });
@@ -25,10 +29,11 @@ router.post('/', async (req, res) => {
 // LOGIN
 
 router.post('/login', async (req, res) => {
+  console.log("Login",req.body)
   try {
     const user = await User.findOne({
       where: {
-        username: req.body.username,
+        email: req.body.email,
       },
     });
 
@@ -47,11 +52,14 @@ router.post('/login', async (req, res) => {
     req.session.save(() => {
       req.session.userId = user.id;
       req.session.username = user.username;
+      req.session.email = newUser.email;
       req.session.loggedIn = true;
 
       res.json({ user, message: 'You are now logged in!' });
     });
+
   } catch (err) {
+    console.log("Login",err)
     res.status(400).json({ message: 'No user account found!' });
   }
 });
