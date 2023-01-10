@@ -211,6 +211,7 @@ h2 {
 .welcome {
     color: white;
     margin-left: 15px;
+    text-align: center;
 }
 
 nav > a {
@@ -224,10 +225,19 @@ nav > a:hover {
 
 .search {
     padding: 5px;
+    width: 90%;
+    background-color: rgb(223, 232, 232);
+    border: 0px;
+    border-radius: 3px;
 }
 .fa {
-    padding: 8px;
+    padding: 7px;
 }
+.search-sbt {
+    width:10%;
+    background-color: rgb(223, 232, 232);
+}
+
 .login {
     text-align: center;
     font-size: 24px;
@@ -237,6 +247,11 @@ nav > a:hover {
 li > a {
     list-style-type: none;
 }
+.li-inline {
+    list-style-type: none;
+    text-align: center;
+    margin-top: 25px;
+}
 
 a {
     text-decoration: none;
@@ -245,6 +260,8 @@ a {
 }
 .navbar {
     margin-top: 30px;
+    text-align: center;
+    justify-content: space-between;
 }
 .footer {
     color: white;
