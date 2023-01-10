@@ -1,34 +1,37 @@
 <link rel="stylesheet" href="/assets/css/chat.css" />
 
-<div id="chatWindow" class="container">
-    <div id="friends" class="column bg-light card border-light mb-3 contacts_card">
-        <h3><i class="fas fa-users"></i> Users</h3>
+<html lang="en">
 
-        <div class="card-body contacts_body">
-            <div class="d-flex bd-highlight">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+        integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+    <title>Message</title>
+</head>
 
-                <ul id="users"></ul>
-            </div>
-        </div>
-    </div>
-    <div id="conversation" class="column">
-        <h3><i class="fas fa-comments"></i> Room Name:</h3>
-        <h2 id="room-name"></h2>
-        <div id="conversationHistory">
+<body>
+    <div class="chat-container">
+        <header class="chat-header">
+            <h1>Messages</h1>
+            
+        </header>
+        <main class="chat-main">
             <div class="chat-messages"></div>
-        </div>
+        </main>
         <div class="chat-form-container">
             <form id="chat-form">
-                <input id="msg" type="text" class="form-control type_msg" placeholder="Type your message here..."
-                    required autocomplete="off" />
-                <button class="btn btn-main"> Send</button>
-            </form>
+                
+                <input id="msg" type="text" placeholder="Enter Message" required autocomplete="off" />
 
+                <button class="btn"><i class="fas fa-paper-plane"></i> Send</button>
+                <a href="homepage" class="btn"> Home </a>
+            </form>
         </div>
     </div>
-</div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.9.2/qs.min.js"
-    integrity="sha256-TDxXjkAUay70ae/QJBEpGKkpVslXaHHayklIVglFRT4=" crossorigin="anonymous"></script>
-<script src="/socket.io/socket.io.js"></script>
-<script src="/js/main.js"></script>
+    
+    <script src="js/server.js"></script>
+</body>
+
+</html>
