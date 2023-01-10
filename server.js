@@ -11,7 +11,7 @@ const app = express();
 const PORT = process.env.PORT || 3001;
 // Creating App Session
 const sess = {
-  secret: "secret",
+  secret: "blog collab secret",
   // Configure Cookie
   cookie: {
     maxAge: 1800000, // 30 Mins
@@ -26,6 +26,8 @@ const sess = {
     db: sequelize,
   }),
 };
+
+app.use(session(sess))
 // Using Sequelize Session
 // app.use(session(sess));
 const hbs = exphbs.create({ helpers });
@@ -45,3 +47,5 @@ sequelize.sync({force: false})
         console.log(`Now listening on http://localhost:${PORT}`);
       });
     });
+
+
